@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import Link from '../Link'
 
 
 import styles from './styles.css';
@@ -12,11 +13,11 @@ import styles from './styles.css';
 function LinkList({ links }) {
 
   const linkNodes = links.map(l =>(
-    <div
+    <Link
     key={l.id}
+    link={l}
     >
-      {l.url} - ({l.description})
-    </div>
+    </Link>
   ));
   return (
     <div className={styles.linkList}>

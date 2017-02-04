@@ -10,9 +10,7 @@ import {
 } from './constants';
 
 const initialState = fromJS({
-  links: [
-
-  ]
+  links: [],
 });
 
 function linkListContainerReducer(state = initialState, action) {
