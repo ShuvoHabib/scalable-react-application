@@ -6,8 +6,6 @@
 
 import React from 'react';
 import Link from '../Link'
-
-
 import styles from './styles.css';
 
 function LinkList({ links }) {
@@ -16,8 +14,7 @@ function LinkList({ links }) {
     <Link
     key={l.id}
     link={l}
-    >
-    </Link>
+    />
   ));
   return (
     <div className={styles.linkList}>
