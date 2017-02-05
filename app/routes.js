@@ -26,7 +26,7 @@ export default function createRoutes(store) {
           System.import('containers/NavigationContainer/reducer'),
           System.import('containers/NavigationContainer/sagas'),
           System.import('containers/LinkListContainer/reducer'),
-          System.import('containers/LinkListContainer/sagas')
+          System.import('containers/LinkListContainer/sagas'),
         ]);
 
         const renderRoute = loadModule(cb);
@@ -36,11 +36,11 @@ export default function createRoutes(store) {
           navigationReducer,
           navigationSagas,
           linkListReducer,
-          linkListSagas
+          linkListSagas,
         ]) => {
           injectReducer('navigationContainer', navigationReducer.default);
-          injectSagas('navigationContainer', navigationSagas.default);
           injectReducer('linkListContainer', linkListReducer.default);
+          injectSagas('navigationContainer', navigationSagas.default);
           injectSagas('linkList', linkListSagas.default);
           renderRoute(component);
         });

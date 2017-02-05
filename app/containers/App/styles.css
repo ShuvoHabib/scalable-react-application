@@ -3,14 +3,21 @@
  *
  * App container styles
  */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
-*{
-  box-sizing: border-box;
-}
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+
+
 .container {
   display: block;
   margin: 10px;
 }
-body{
-  background-color: #e5e5e5;
+
+body {
+  font-family: Roboto;
+  background-color: #E5E5E5;
+}
+
+* {
+  box-sizing: border-box;
 }

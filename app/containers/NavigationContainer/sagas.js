@@ -4,23 +4,23 @@ import { takeLatest } from 'redux-saga';
 import { call, put } from 'redux-saga/effects';
 import { requestTopicsSucceeded, requestTopicsFailed } from './actions';
 
-
 export function fetchTopicsFromServer() {
   return fetch('http://localhost:3000/api/topics')
     .then(response => response.json());
 }
 
 function* fetchTopics() {
-  try{
+  try {
     const topics = yield call(fetchTopicsFromServer);
     yield put(requestTopicsSucceeded(topics));
-  } catch(e){
+  } catch (e) {
     yield put(requestTopicsFailed(e.message));
   }
 }
+
 // Individual exports for testing
 export function* fetchTopicsSaga() {
-   yield* takeLatest(REQUEST_TOPICS, fetchTopics);
+  yield* takeLatest(REQUEST_TOPICS, fetchTopics);
 }
 
 // All sagas to be loaded

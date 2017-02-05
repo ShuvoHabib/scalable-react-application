@@ -5,17 +5,17 @@
 */
 
 import React from 'react';
-import Link from '../Link'
 import styles from './styles.css';
+import Link from '../Link';
 
 function LinkList({ links }) {
-
-  const linkNodes = links.map(l =>(
+  const linkNodes = links.map(l => (
     <Link
-    key={l.id}
-    link={l}
+      key={l.id}
+      link={l}
     />
   ));
+
   return (
     <div className={styles.linkList}>
       {linkNodes}
@@ -28,8 +28,7 @@ LinkList.propTypes = {
     description: React.PropTypes.string.isRequired,
     url: React.PropTypes.string.isRequired,
     id: React.PropTypes.string.isRequired,
-  }))
+  })),
 };
-
 
 export default LinkList;
